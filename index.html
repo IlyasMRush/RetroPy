@@ -113,63 +113,239 @@
                     0x0000,
                 }
                 
+			<span style="font-weight: bolder;">Getting Started</span>
+            <span style="font-weight: bold;">Minimal Code</span>
+				from retropy import Rect, screen
+                def update(dt):
+                    pass
+                def draw():
+                    pass
+                def on_key_down(key):
+                    pass
+                def on_key_up(key):
+                    pass  
+                screen.run(update, draw, on_key_down, on_key_up)
+                Ex-00.py
+
+			<span style="font-weight: bold;">Drawing primitives</span>
+				from retropy import Rect, screen
+                def update(dt):
+                    pass
+                def draw():
+                    screen.draw.clear()
+                    screen.draw.filled_rect(Rect(0, 0, 24, 24), 5)
+                    screen.draw.filled_circle(50, 50, 12, 8)
+                    screen.draw.text("Hello World", 75, 100, 7)
+                def on_key_down(key):
+                    pass
+                def on_key_up(key):
+                    pass  
+                screen.run(update, draw, on_key_down, on_key_up)
+                Ex-01.py
+
+
+			<span style="font-weight: bold;">Sprite</span>
+				Place a sprite
+                from retropy import Rect, screen, actor
+                import assets
+                player = actor(assets.player, 20, 20, 0, 0, 0)
+                def update(dt):
+                    pass
+                def draw():
+                    screen.draw.clear()
+                    player.draw()
+                def on_key_down(key):
+                    pass
+                def on_key_up(key):
+                    pass  
+                screen.run(update, draw, on_key_down, on_key_up)
                 
+                Place a sprite and animate (300 msec)
+                player.flipDuration(300)
 
-			<span style="font-weight: bold;">Java:</span>
-				- Strong knowledge in OOP design and modeling.
-				- Familiar with ORM technique.
-				- Familiar with JVM theory and concepts.
-				- Familiar with use of JVM with other runtime languages such
-				  as Kotlin and Scala. Kotlin for Android dev too.
+                give speed in the x axis (80 pixel per second)
+                player.speed_x(80)
 
-			<span style="font-weight: bold;">Other Native related technologies:</span>
-				- Working knowledge of Electron JS technology and usage.
-				- React JS experiences that can help me in future endeavours with
-				  React Native when required
-				- Java Swing GUI library for Desktop App developement.
-				- Brief exposure to Android developement
+                set boundaries for the x axis (form 0 to 224 – the size of the sprite is 14
+                player.bound_x(0,224)
 
-			<span style="font-weight: bold;">Python:</span>
-				- Working knowledge of Python
-				- Working experience of using Python as backend web server with Flask
-				- Did some competitve programming in Python before, with focus
-				  on optimizations and clean API.
-				  View the above in my Github <a href="https://github.com/Jaimeloeuf/pythonmorsels">repo</a>.
+                Everything in one line of code
+                player = actor(assets.player, 20, 20, 300, 80, 0, 0, 224, 0, 224)
+
+                complete code
+                player = actor(assets.player, 20, 20, 300, 80,  0, 224, 0, 224)
+
+                from retropy import Rect, screen, actor
+                import assets
+
+                player = actor(assets.player, 20, 20, 0, 0, 0)
+                player.flipDuration(300)
+                player.speed_x(80)
+                player.bound_x(0,224)
+
+                def update(dt):
+                    pass
+
+                def draw():
+                    screen.draw.clear()
+                    player.draw()
+
+                def on_key_down(key):
+                    pass
+                def on_key_up(key):
+                    pass  
+
+                screen.run(update, draw, on_key_down, on_key_up)
+
+
+                Controlling movement in the x-axis
+                Left - 0
+                Right - 3
+                Up - 2
+                Down - 1
+
+                from retropy import Rect, screen, actor
+                import assets
+
+                player = actor(assets.player, 20, 20, 300, 80, 0, 0, 224, 0, 224)
+
+                def update(dt):
+                    pass
+
+                def draw():
+                    screen.draw.clear()
+                    player.draw()
+
+                def on_key_down(key):
+                    if (key == 0): #keys.LEFT
+                        player.speed_x(-80)    
+                    elif (key == 3): #keys.RIGHT
+                        player.speed_x(80)    
+        
+                def on_key_up(key):
+                    pass  
+
+                screen.run(update, draw, on_key_down, on_key_up)
+
+
 			
 			<span style="font-weight: bold;">AI Related</span>
-				Working knowledge on Machine Learning and Deep Learning
-				with tools like Tensorflow and Tensorflow JS.
-				Participated in Microsoft Imagine Cup 2019 with a project
-				focused heavily on image recognition and classification
-				with custom built algorthims and neural networks.
-			
-			<span style="font-weight: bold;">Security</span>
-				Experiences with security implementations in the Web Dev field.
-				Basic understanding of ethical hacking and some experiences with
-				tools in Kali Linux such as Metasploit/Armitage and NMap/Zenmap.
-				Basic experiences with hardware reverse engineering.
+				{ MP_ROM_QSTR(MP_QSTR_init), MP_ROM_PTR(&Draw_init_obj) },
+                { MP_ROM_QSTR(MP_QSTR_fill), MP_ROM_PTR(&Disp_filled_obj) },
 
-			<span style="font-weight: bold;">Others:</span>
-				Database Design and usage:
-					- Some experiences with mySQL and Relational Databases
-					- Some experiences with NoSQL using MongoDB
-					- Basic experiences with GraphQL
-				Familiar and comfortable with many programming paradigms:
-					- Procedual programming (C/C++ and Embedded Devices)
-					- Object Oriented Programming (JavaScript / C++ / Java / Python)
-					- Funtional Programming (JavaScript)
-					- Basic understanding of Reactive Programming with RxJS
-				
-			<span style="font-weight: bold;">Electronics:</span>
-				- Familiar with using most lab equipments such as
-				  analog/digital oscilloscopes.
-				- Specialise in mixed circuit designs and logic controllers.
-				- Familiar with Power supply design and Signal Conditioning
-				  techniques and circuit design.
-				- Familiar with Amplifier designs and really interested
-				  in these, I have a project based on this as well
-				  where I designed and created my own Speaker Amp.
-				- Basic knowledge of FPGAs.
+                //{ MP_ROM_QSTR(MP_QSTR_hack), 		(mp_obj_t)&hack_type }, 
+                //{ MP_ROM_QSTR(MP_QSTR_Disp), 		(mp_obj_t)&rpDisp_type },  
+                //{ MP_ROM_QSTR(MP_QSTR_fillBuff), MP_ROM_PTR(&Draw_fillBuff_obj) }, 
+                { MP_ROM_QSTR(MP_QSTR_fill), MP_ROM_PTR(&Draw4_fill_obj) }, 
+                { MP_ROM_QSTR(MP_QSTR_pixel), MP_ROM_PTR(&Draw4_pixel_obj) }, 
+                //{ MP_ROM_QSTR(MP_QSTR_pixelC), MP_ROM_PTR(&Draw_pixelC_obj) }, 
+
+                { MP_ROM_QSTR(MP_QSTR_line), MP_ROM_PTR(&Draw4_line_obj) },
+                { MP_ROM_QSTR(MP_QSTR_hline), MP_ROM_PTR(&Draw4_hline_obj) },
+                { MP_ROM_QSTR(MP_QSTR_vline), MP_ROM_PTR(&Draw4_vline_obj) },
+                { MP_ROM_QSTR(MP_QSTR_circle), MP_ROM_PTR(&Draw4_circle_obj) },
+                { MP_ROM_QSTR(MP_QSTR_filled_circle), MP_ROM_PTR(&Draw4_filled_circle_obj) },
+
+                { MP_ROM_QSTR(MP_QSTR_rect), MP_ROM_PTR(&Draw4_rect_obj) },
+                { MP_ROM_QSTR(MP_QSTR_filled_rect), MP_ROM_PTR(&Draw4_filled_rect_obj) },
+                //{ MP_ROM_QSTR(MP_QSTR_rectF), MP_ROM_PTR(&Draw_rectF_obj) },
+
+                { MP_ROM_QSTR(MP_QSTR_clear), MP_ROM_PTR(&Draw4_clear_obj) },
+                { MP_ROM_QSTR(MP_QSTR_text), MP_ROM_PTR(&Draw4_text_obj) },
+                { MP_ROM_QSTR(MP_QSTR_blit), MP_ROM_PTR(&Draw4_blit_obj) },
+                //{ MP_ROM_QSTR(MP_QSTR_blitMask), MP_ROM_PTR(&Draw_blitMask_obj) },
+                //{ MP_ROM_QSTR(MP_QSTR_blitMaskN), MP_ROM_PTR(&Draw_blitMaskN_obj) },
+                { MP_ROM_QSTR(MP_QSTR_sprite), MP_ROM_PTR(&Draw4_sprite_obj) },
+
+                { MP_ROM_QSTR(MP_QSTR_currColor), MP_ROM_PTR(&Draw4_currColor_obj) }, 
+                //{ MP_ROM_QSTR(MP_QSTR_colorRGB), MP_ROM_PTR(&Draw_colorRGB_obj) },
+                //{ MP_ROM_QSTR(MP_QSTR_copyB2B), MP_ROM_PTR(&Draw_copyB2B_obj) }, 
+                { MP_ROM_QSTR(MP_QSTR_Rect), 		(mp_obj_t)&rpRect_type }, 
+                //{ MP_ROM_QSTR(MP_QSTR_Actor), 		(mp_obj_t)&rpActor_type },
+
+
+
+                { MP_ROM_QSTR(MP_QSTR_init), MP_ROM_PTR(&Actor_init_obj) },
+                { MP_ROM_QSTR(MP_QSTR_flipDuration), MP_ROM_PTR(&Actor_flipDuration_obj) },
+
+                { MP_ROM_QSTR(MP_QSTR_mid_x), MP_ROM_PTR(&Actor_mid_x_obj) },
+                { MP_ROM_QSTR(MP_QSTR_mid_y), MP_ROM_PTR(&Actor_mid_y_obj) },
+                { MP_ROM_QSTR(MP_QSTR_pos_x), MP_ROM_PTR(&Actor_pos_x_obj) },
+                { MP_ROM_QSTR(MP_QSTR_pos_y), MP_ROM_PTR(&Actor_pos_y_obj) },
+                { MP_ROM_QSTR(MP_QSTR_pos), MP_ROM_PTR(&Actor_pos_obj) },
+                { MP_ROM_QSTR(MP_QSTR_speed_x), MP_ROM_PTR(&Actor_speed_x_obj) },
+                { MP_ROM_QSTR(MP_QSTR_speed_y), MP_ROM_PTR(&Actor_speed_y_obj) },
+                { MP_ROM_QSTR(MP_QSTR_speed), MP_ROM_PTR(&Actor_speed_obj) },
+
+                //{ MP_ROM_QSTR(MP_QSTR_bound), MP_ROM_PTR(&Actor_bound_obj) },
+                { MP_ROM_QSTR(MP_QSTR_bound_x), MP_ROM_PTR(&Actor_bound_x_obj) },
+                { MP_ROM_QSTR(MP_QSTR_bound_y), MP_ROM_PTR(&Actor_bound_y_obj) },
+                { MP_ROM_QSTR(MP_QSTR_dist), MP_ROM_PTR(&Actor_dist_obj) },
+
+                { MP_ROM_QSTR(MP_QSTR_sprite), MP_ROM_PTR(&Actor_sprite_obj) },
+                { MP_ROM_QSTR(MP_QSTR_currNdx), MP_ROM_PTR(&Actor_currNdx_obj) },
+                { MP_ROM_QSTR(MP_QSTR_mode), MP_ROM_PTR(&Actor_mode_obj) },
+
+                { MP_ROM_QSTR(MP_QSTR_moveTowards), MP_ROM_PTR(&Actor_moveTowards_obj) },
+                { MP_ROM_QSTR(MP_QSTR_updateTowards), MP_ROM_PTR(&Actor_updateTowards_obj) },
+                { MP_ROM_QSTR(MP_QSTR_update), MP_ROM_PTR(&Actor_update_obj) },
+                { MP_ROM_QSTR(MP_QSTR_draw), MP_ROM_PTR(&Actor_draw_obj) },
+
+                { MP_ROM_QSTR(MP_QSTR___name__), 	MP_ROM_QSTR(MP_QSTR_rpDisp) },
+                { MP_ROM_QSTR(MP_QSTR_test),       	MP_ROM_PTR(&rpDisp_test_obj) },
+
+                { MP_ROM_QSTR(MP_QSTR_Disp), 		(mp_obj_t)&rpDisp_type },  
+
+
+
+                typedef struct _Actor_Actor_obj_t {
+                    mp_obj_base_t base;
+
+                    uint8_t *_buffer;			// resident buffer if buffer_size given
+                    uint8_t num;             //
+                    uint8_t width;             //
+                    uint8_t height;            //
+                    uint16_t wxh;            //
+                    int16_t  curr_ndx;			//
+                    uint8_t ActorMode;
+
+                    int16_t x;			//
+                    int16_t y;			//
+                    float  speed_x;
+                    float  speed_y;
+                    //mp_float_t xx;
+                    float xx;
+                    float yy;
+                    int16_t min_x;			//
+                    int16_t max_x;			//
+                    int16_t min_y;			//
+                    int16_t max_y;			//
+
+                    uint32_t start_millis;
+                    uint32_t pre_millis;
+                    uint32_t change_millis;
+
+                } Actor4_obj_t;
+                mp_obj_t Actor_make_new( const mp_obj_type_t *type, size_t n_args, size_t n_kw, const mp_obj_t *args );
+                STATIC void Actor_print( const mp_print_t *print, mp_obj_t self_in, mp_print_kind_t kind ) {
+                    (void)kind;
+                    Actor4_obj_t *self = MP_OBJ_TO_PTR(self_in);
+                    mp_printf(print, "<rpActor num=%u, width=%u, height=%u>", self->num, self->width, self->height);
+                }
+                #endif
+
+                #ifndef TypeDef_Draw4_obj_t
+                typedef struct _Draw_Draw_obj_t {
+                    mp_obj_base_t base;
+
+                    uint8_t *_buffer;			// resident buffer if buffer_size given
+                    int16_t width;             // logical width (after rotation)
+                    int16_t height;            // logical height (after rotation)
+                    uint16_t stride;			//
+                    uint8_t  curr_color;			//
+                    uint8_t drawMode;
+                    //mp_float_t xx;
+                } Draw4_obj_t;
 		</pre>
 	</div>
 
