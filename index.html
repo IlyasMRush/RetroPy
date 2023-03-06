@@ -36,7 +36,6 @@
         <pre>
         RetroPy is fresh out of the oven and currently just got of beta. Do watch out for updates on this site.
         </pre>
-        
     
         <span style="font-weight: bold;">Example</span>
         <pre>
@@ -53,6 +52,45 @@
                 rpy.show()
                 </pre>
             </div>
+        
+        <pre>
+        Next is an example of using retroPy as a simple game engine
+        </pre>
+        
+        <div class="test">
+            <pre>
+                from retroPy import rpy, Rect
+
+                def update(dt):
+                    pass
+
+                def draw():
+                    rpy.clear()
+                    rpy.filled_circle(120, 120, 100, 8)
+                    rpy.text("hello!", 95, 115, 7) 
+
+                def on_key_down(key):
+                    pass
+                def on_key_up(key):
+                    pass  
+                #=========================================================================
+                rpy.run(update, draw, on_key_down, on_key_up)
+                </pre>
+            </div>
+        
+        <span style="font-weight: bold;">retroPy Color Palette</span>
+        <pre>
+            retroPy uses a 16 color palette system
+            (retroPy uses the same color pallet as Pico-8)
+            </pre>
+        
+        <img src="imgs/color_pallet.png">
+        
+        <pre>
+            Color values
+            0x0000, 0x194A, 0x792A, 0x042A, 0xAA86, 0x5AA9, 0xC618, 0xFF9D,
+            0xF809, 0xFD00, 0xFF64, 0x0726, 0x2D7F, 0x83B3, 0xFBB5, 0xFE75
+            </pre>
         
         <span style="font-weight: bold;">Draw:</span>
         <pre>
