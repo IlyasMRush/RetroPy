@@ -16,6 +16,15 @@
 
 <body id="top" class="grid-container">
 	<h3 class="title">Retro Py Tutorial</h3>
+    
+    <div class="about-me" style="text-align: center;">
+		A game console for retro gaming using the Raspberry Pi Pico using Python.<br>
+		Most of the concept of RetroPy mimic small game engine such as PyGame Zero, Pyxel and Pico-8.<br>
+		The main idea of RetroPy is to create retro games using a “morden” programming language ie Python.<br>
+		RetroPy runs on a small game console making if super mobile.<br>
+        RetroPy is definitely a fun way to learn Python and a simple way to get into game programming.<br>
+	</div>
+    
 	<div class="skill-set">
         <span style="font-weight: bold;">Draw:</span>
         <pre>
@@ -160,22 +169,24 @@
             screen.run(update, draw, on_key_down, on_key_up)
             Ex-00.py
             </pre>
-
-			<!--span style="font-weight: bold;">Drawing primitives</span>
-				from retropy import Rect, screen
-                def update(dt):
-                    pass
-                def draw():
-                    screen.draw.clear()
-                    screen.draw.filled_rect(Rect(0, 0, 24, 24), 5)
-                    screen.draw.filled_circle(50, 50, 12, 8)
-                    screen.draw.text("Hello World", 75, 100, 7)
-                def on_key_down(key):
-                    pass
-                def on_key_up(key):
-                    pass  
-                screen.run(update, draw, on_key_down, on_key_up)
-                Ex-01.py
+        
+        <span style="font-weight: bold;">Drawing primitives</span>
+        <pre>
+            from retropy import Rect, screen
+            def update(dt):
+                pass
+            def draw():
+                screen.draw.clear()
+                screen.draw.filled_rect(Rect(0, 0, 24, 24), 5)
+                screen.draw.filled_circle(50, 50, 12, 8)
+                screen.draw.text("Hello World", 75, 100, 7)
+            def on_key_down(key):
+                pass
+            def on_key_up(key):
+                pass  
+            screen.run(update, draw, on_key_down, on_key_up)
+            Ex-01.py
+            </pre>
 
 
 			<span style="font-weight: bold;">Sprite</span>
