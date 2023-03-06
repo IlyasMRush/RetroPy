@@ -187,95 +187,91 @@
             screen.run(update, draw, on_key_down, on_key_up)
             Ex-01.py
             </pre>
-
-
-			<span style="font-weight: bold;">Sprite</span>
-				Place a sprite
-                from retropy import Rect, screen, actor
-                import assets
-                player = actor(assets.player, 20, 20, 0, 0, 0)
-                def update(dt):
-                    pass
-                def draw():
-                    screen.draw.clear()
-                    player.draw()
-                def on_key_down(key):
-                    pass
-                def on_key_up(key):
-                    pass  
-                screen.run(update, draw, on_key_down, on_key_up)
-                
-                Place a sprite and animate (300 msec)
-                player.flipDuration(300)
-
-                give speed in the x axis (80 pixel per second)
-                player.speed_x(80)
-
-                set boundaries for the x axis (form 0 to 224 – the size of the sprite is 14
-                player.bound_x(0,224)
-
-                Everything in one line of code
-                player = actor(assets.player, 20, 20, 300, 80, 0, 0, 224, 0, 224)
-
-                complete code
-                player = actor(assets.player, 20, 20, 300, 80,  0, 224, 0, 224)
-
-                from retropy import Rect, screen, actor
-                import assets
-
-                player = actor(assets.player, 20, 20, 0, 0, 0)
-                player.flipDuration(300)
-                player.speed_x(80)
-                player.bound_x(0,224)
-
-                def update(dt):
-                    pass
-
-                def draw():
-                    screen.draw.clear()
-                    player.draw()
-
-                def on_key_down(key):
-                    pass
-                def on_key_up(key):
-                    pass  
-
-                screen.run(update, draw, on_key_down, on_key_up)
-
-
-                Controlling movement in the x-axis
-                Left - 0
-                Right - 3
-                Up - 2
-                Down - 1
-
-                from retropy import Rect, screen, actor
-                import assets
-
-                player = actor(assets.player, 20, 20, 300, 80, 0, 0, 224, 0, 224)
-
-                def update(dt):
-                    pass
-
-                def draw():
-                    screen.draw.clear()
-                    player.draw()
-
-                def on_key_down(key):
-                    if (key == 0): #keys.LEFT
-                        player.speed_x(-80)    
-                    elif (key == 3): #keys.RIGHT
-                        player.speed_x(80)    
         
-                def on_key_up(key):
-                    pass  
+        <span style="font-weight: bold;">Sprite</span>
+        <pre>
+            Place a sprite
+            from retropy import Rect, screen, actor
+            import assets
+            player = actor(assets.player, 20, 20, 0, 0, 0)
+            def update(dt):
+                pass
+            def draw():
+                screen.draw.clear()
+                player.draw()
+            def on_key_down(key):
+                pass
+            def on_key_up(key):
+                pass  
+            screen.run(update, draw, on_key_down, on_key_up)
 
-                screen.run(update, draw, on_key_down, on_key_up)
-		</pre>
+            Place a sprite and animate (300 msec)
+            player.flipDuration(300)
+
+            give speed in the x axis (80 pixel per second)
+            player.speed_x(80)
+
+            set boundaries for the x axis (form 0 to 224 – the size of the sprite is 14
+            player.bound_x(0,224)
+
+            Everything in one line of code
+            player = actor(assets.player, 20, 20, 300, 80, 0, 0, 224, 0, 224)
+
+            complete code
+            player = actor(assets.player, 20, 20, 300, 80,  0, 224, 0, 224)
+
+            from retropy import Rect, screen, actor
+            import assets
+
+            player = actor(assets.player, 20, 20, 0, 0, 0)
+            player.flipDuration(300)
+            player.speed_x(80)
+            player.bound_x(0,224)
+
+            def update(dt):
+                pass
+
+            def draw():
+                screen.draw.clear()
+                player.draw()
+
+            def on_key_down(key):
+                pass
+            def on_key_up(key):
+                pass  
+
+            screen.run(update, draw, on_key_down, on_key_up)
 
 
-        <span style="font-weight: bold;">Drawing primitives</span-->
+            Controlling movement in the x-axis
+            Left - 0
+            Right - 3
+            Up - 2
+            Down - 1
 
+            from retropy import Rect, screen, actor
+            import assets
+
+            player = actor(assets.player, 20, 20, 300, 80, 0, 0, 224, 0, 224)
+
+            def update(dt):
+                pass
+
+            def draw():
+                screen.draw.clear()
+                player.draw()
+
+            def on_key_down(key):
+                if (key == 0): #keys.LEFT
+                    player.speed_x(-80)    
+                elif (key == 3): #keys.RIGHT
+                    player.speed_x(80)    
+
+            def on_key_up(key):
+                pass  
+
+            screen.run(update, draw, on_key_down, on_key_up)
+            </pre>
 	</div>
 	<!--div id="projects" class="projects">
 		<pre>
