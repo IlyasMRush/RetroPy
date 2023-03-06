@@ -12,14 +12,14 @@ body {
 }
 
 a, a:link, a:visited, a:hover, a:active {
-	color: #7b7b7b;
+	color: #3b3b3b;
 	text-decoration: none;
 }
 
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(7, auto);
-	grid-template-rows: repeat(10, auto);
+	grid-template-columns: repeat(3, auto);
+	grid-template-rows: repeat(7, auto);
 	grid-template-areas:
 		". title ."
 		"pic nav-bar contact-me"
