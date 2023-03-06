@@ -61,6 +61,13 @@ img {
 	margin-top: 0.5em;
 }
 
+.test {
+    background-color: lightgrey;
+    width: 300px;
+    padding: 50px;
+    margin: 20px;
+}
+
 .skill-set { grid-area: skill-set; }
 .projects { grid-area: projects; }
 
@@ -99,6 +106,7 @@ img {
 		"nav-bar"
 		"about-me"
 		"skill-set"
+        "test"
 		"projects"
 		"footer";
 	}
