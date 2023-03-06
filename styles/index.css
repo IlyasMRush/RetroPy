@@ -18,8 +18,8 @@ a, a:link, a:visited, a:hover, a:active {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(10, auto);
+	grid-template-columns: repeat(10, auto);
+	grid-template-rows: repeat(20, auto);
 	grid-template-areas:
 		". title ."
 		"pic nav-bar contact-me"
