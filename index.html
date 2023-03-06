@@ -84,7 +84,9 @@
             (retroPy uses the same color pallet as Pico-8)
             </pre>
         
-        <img src="imgs/color_pallet.png">
+        <div class="test">
+            <img src="imgs/color_pallet.png">
+            </div>
         
         <pre>
             Color values
@@ -92,7 +94,33 @@
             0xF809, 0xFD00, 0xFF64, 0x0726, 0x2D7F, 0x83B3, 0xFBB5, 0xFE75
             </pre>
         
-        <span style="font-weight: bold;">Draw:</span>
+        <span style="font-weight: bold;">API Reference</span>
+        <span style="font-weight: bold;">Setup</span>
+        <pre>
+            - clear()
+              clear the screen black
+            - fill(color)
+              clear the screen with color
+            - pixel(x, y)
+              set the pixel at x, y with color
+            - line(start, end, color)
+              draw a line starting at x1, y1 and ending at x2, y2
+            - hline(start, length, color)
+              draw a horizontal line at x, y with length and color
+            - vline(start, height, color)
+              draw a verticle line at x, y with length and color
+            - circle(center, radius, color)
+              draw a circle center x, y with radius and color
+            - filled_circle(center, radius, color)
+              draw a filled circle center x, y with radius and color
+            - rect(Rect, color)
+              draw a rectangle at Rect with color
+            - filled_rect(Rect, color)
+              draw a filled rectangle at Rect with color
+            - text(string, start, color)
+              write a string at x, y with color
+            </pre>
+        <!--span style="font-weight: bold;">Draw:</span>
         <pre>
             - clear()
             - fill(color)
@@ -337,7 +365,7 @@
                 pass  
 
             screen.run(update, draw, on_key_down, on_key_up)
-            </pre>
+            </pre-->
 	</div>
 	<!--div id="projects" class="projects">
 		<pre>
