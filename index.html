@@ -120,6 +120,53 @@
             - text(string, start, color)
               write a string at x, y with color
             </pre>
+        
+        <span style="font-weight: bold;">Actors</span>
+        <pre>
+            - actor(ptr2spriteTable, x, y, flipDuration, speed_x, speed_y)
+              create an actor with spriteTable at x, y with flipDuratopm and speed_x and speed_y
+              speed is in pixel per second (float)
+            - speed(speed_x, speed_y)
+              actor speed x direction and y direction
+            - speed_x (property)
+              get actor speed x direction
+            - speed_x(speed)
+              set actor speed in the x direction
+            - speed_y (property)
+              get actor speed y direction
+            - speed_y(speed)
+              set actor speed in the y direction
+
+            - pos(pos_x, pos_y)
+              set actor positions
+            - pos_x (property)
+              get actor x poaition
+            - pos_x(position)
+              set actor x position
+            - pos_y (property)
+              get actor y poaition
+            - pos_y(position)
+              set actor y position
+
+            - bound(xmin, xmax, ymin, ymax)
+              set the maximum and minimum x and y positions
+            - bound_x(xmin, xmax)
+              set the maximum and minimum x  positions
+            - bound_y(ymin, ymax)
+              set the maximum and minimum y positions
+
+            - dist(actor)
+              get distance between 2 actors
+            - sprite()
+              change the spriteTable
+            - currNdx(ndx)
+              get the current sprite index
+
+            - moveTowards(x, y, speed, dt)
+
+            - draw()
+              draw the actor in the draw 
+            </pre>
         <!--span style="font-weight: bold;">Draw:</span>
         <pre>
             - clear()

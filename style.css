@@ -40,8 +40,6 @@ a, a:link, a:visited, a:hover, a:active {
 
 img {
 	grid-area: pic;
-	max-width: 4.5cm;
-    max-height: 100%;
 }
 
 .contact-me {
