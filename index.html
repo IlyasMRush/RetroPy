@@ -34,6 +34,7 @@
             - blit(bytearray, x, y)
             - sprite(SpriteArray, x, y)
             </pre>
+        
         <span style="font-weight: bold;">Rect:</span>
         <pre>
             - A built in class
@@ -41,133 +42,126 @@
             - All arguments color, start, end, elngth, center, radius, x, y
               and width are integers except for string and Rect
             </pre>
-			<!--span style="font-weight: bold;">Actor:</span>
-				- (ptr2spriteTable, x, y, flipDuration, speed_x, speed_y)
-				- speed(speed_x, speed_y)
-                - speed_x(speed)
-                - float speed_x()
-                - speed_y(speed)
-                - float speed_y()
-                - bound(xmin, xmax, ymin, ymax)
-                - bound_x(xmin, xmax)
-                - bound_y(ymin, ymax)
-                - dist(actor)
-                - sprite()
-                - currNdx(ndx)
-                moveTowards(x, y, speed, dt)
-                - draw()
+        
+        <span style="font-weight: bold;">Actor:</span>
+        <pre>
+            - (ptr2spriteTable, x, y, flipDuration, speed_x, speed_y)
+            - speed(speed_x, speed_y)
+            - speed_x(speed)
+            - float speed_x()
+            - speed_y(speed)
+            - float speed_y()
+            - bound(xmin, xmax, ymin, ymax)
+            - bound_x(xmin, xmax)
+            - bound_y(ymin, ymax)
+            - dist(actor)
+            - sprite()
+            - currNdx(ndx)
+            moveTowards(x, y, speed, dt)
+            - draw()
+            </pre>
+        
+        <span style="font-weight: bold;">Sound:</span>
+        <pre>
+            - Init()
+            - Play()
+            - Stop()
+            - Pause()
+            - Cont()
+            - isPlaying
 
-			<span style="font-weight: bold;">Sound:</span>
-				- Init()
-				- Play()
-				- Stop()
-				- Pause()
-				- Cont()
-				- isPlaying
-                
-                - const uint16_t RGB4to565lookupTable[16]={
-                    0x0000,
-                }
-                
-                
-                
-            <span style="font-weight: bold;">Actors</span>
-                Asteroid 4x14x14
-                <img src="imgs/asteroid.png">
-                
-                bombs
-                bomb1 2x8x8
-                <img src="imgs/bombs.png">
-                Bomb2 2x8x8
-                <img src="imgs/bombs.png">
-                
-                boosters
-                boosters 2x16x7
-                <img src="imgs/boosters.png">
-                
-                boy
-                boy_idle 2x16x16
-                <img src="imgs/boosters.png">
-                boy_idle_r 2x16x16
-                <img src="imgs/boosters.png">
-                boy_idle_l 2x16x16
-                <img src="imgs/boosters.png">
-                boy_idle_u 2x16x16
-                <img src="imgs/boosters.png">
-                
-                boy_walk_d 4x16x16
+            - const uint16_t RGB4to565lookupTable[16]={
+                0x0000,
+            }
+            </pre>
+        
+        <span style="font-weight: bold;">Actors</span>
+        <pre>
+            Asteroid 4x14x14
+            <img src="imgs/asteroid.png">
 
-                boy_walk_l 4x16x16
+            bombs
+            bomb1 2x8x8
+            <img src="imgs/bombs.png">
+            Bomb2 2x8x8
+            <img src="imgs/bombs.png">
 
-                boy_walk_r 4x16x16
+            boosters
+            boosters 2x16x7
+            <img src="imgs/boosters.png">
 
-                boy_walk_u 4x16x16
+            boy
+            boy_idle 2x16x16
+            <img src="imgs/boosters.png">
+            boy_idle_r 2x16x16
+            <img src="imgs/boosters.png">
+            boy_idle_l 2x16x16
+            <img src="imgs/boosters.png">
+            boy_idle_u 2x16x16
+            <img src="imgs/boosters.png">
 
+            boy_walk_d 4x16x16
 
-                enemy2 2x16x16x
+            boy_walk_l 4x16x16
 
+            boy_walk_r 4x16x16
 
+            boy_walk_u 4x16x16
 
-                explosion 3x16x16
+            enemy2 2x16x16x
 
-                explosion1 6x16x16
+            explosion 3x16x16
 
-                Explosion2 5x16x16
+            explosion1 6x16x16
 
-
-                heart 3x16x16
+            Explosion2 5x16x16
 
 
-                Heart_red 3x16x16
+            heart 3x16x16
 
 
-                lips 5x16x16
+            Heart_red 3x16x16
 
 
-                projectile 4x8x16
-
-                Projectile1 2x14x6
+            lips 5x16x16
 
 
+            projectile 4x8x16
+
+            Projectile1 2x14x6
+
+            ship 3x16x16
+
+            Ship1 1x26x12
+
+            Ship2 1x16x16
+
+            wall
+            wall1 1x16x16
+
+            wall2 1x16x16
 
 
+            Test1.py 1x16x16
+            </pre>
+        
+        <span style="font-weight: bold;">Getting Started</span>
+        <span style="font-weight: bold;">Minimal Code</span>
+        <pre>
+            from retropy import Rect, screen
+            def update(dt):
+                pass
+            def draw():
+                pass
+            def on_key_down(key):
+                pass
+            def on_key_up(key):
+                pass  
+            screen.run(update, draw, on_key_down, on_key_up)
+            Ex-00.py
+            </pre>
 
-
-                ship 3x16x16
-
-
-
-                Ship1 1x26x12
-
-
-                Ship2 1x16x16
-
-
-                wall
-                wall1 1x16x16
-
-                wall2 1x16x16
-
-
-                Test1.py 1x16x16
-                
-			<span style="font-weight: bold;">Getting Started</span>
-            <pre>
-            
-            <span style="font-weight: bold;">Minimal Code</span>
-				from retropy import Rect, screen
-                def update(dt):
-                    pass
-                def draw():
-                    pass
-                def on_key_down(key):
-                    pass
-                def on_key_up(key):
-                    pass  
-                screen.run(update, draw, on_key_down, on_key_up)
-                Ex-00.py
-
-			<span style="font-weight: bold;">Drawing primitives</span>
+			<!--span style="font-weight: bold;">Drawing primitives</span>
 				from retropy import Rect, screen
                 def update(dt):
                     pass
