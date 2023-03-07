@@ -74,6 +74,7 @@ img {
 }
 
 .test {
+    font-family: 'Courier New';
     background-color: lightgrey;
     margin: 20px;
 }
