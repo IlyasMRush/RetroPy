@@ -34,7 +34,7 @@ a, a:link, a:visited, a:hover, a:active {
     background-color: lightgrey;
 }*/
 
-mark { 
+.nmark { 
     font-family: 'Courier New';
     background-color: yellow;
     color: black;
