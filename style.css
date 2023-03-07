@@ -28,10 +28,16 @@ a, a:link, a:visited, a:hover, a:active {
 		". projects ."
 		". footer .";
 }
-
+/*
 .codeline {
     font-family: 'Courier New';
     background-color: lightgrey;
+}*/
+
+mark { 
+    font-family: 'Courier New';
+    background-color: yellow;
+    color: black;
 }
 
 .title {
@@ -102,7 +108,8 @@ img {
 
 @media screen and (max-width: 58em) {
 	/* Hide image and contact-me icons. Resize to 1 column */
-	img, .contact-me { display: none; }
+	/*img, .contact-me { display: none; }*/
+    img { max-width: 60%; }
 	.grid-container {
 		grid-template-columns: auto;
 		grid-template-areas:
