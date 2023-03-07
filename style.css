@@ -51,7 +51,7 @@ mark {
 
 
 img {
-	grid-area: pic;
+    grid-area: pic;
     max-width: 100%;
     max-height: 100%;
 }
@@ -74,7 +74,6 @@ img {
 }
 
 .test {
-    font-family: 'Courier New';
     background-color: lightgrey;
     margin: 20px;
 }
