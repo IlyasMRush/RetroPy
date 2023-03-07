@@ -29,6 +29,11 @@ a, a:link, a:visited, a:hover, a:active {
 		". footer .";
 }
 
+.codeline {
+    font-family: 'Courier New';
+    background-color: lightgrey;
+}
+
 .title {
 	font-size: 1.6em;
 	grid-area: title;
