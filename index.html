@@ -255,44 +255,44 @@
         
         <span style="font-weight: bold;">Minimal Code</span>
         <div class="test">
-            <pre>
-                from retroPy import rpy
+            <span style="font-family: 'Courier New'">
+                from retroPy import rpy<br><br>
 
-                def update(dt):
-                    pass
+                def update(dt):<br>
+                <span class="tab"></span>pass<br><br>
 
-                def draw():
-                    pass
+                def draw():<br>
+                <span class="tab"></span>pass<br><br>
 
-                def on_key_down(key):
-                    pass
-                def on_key_up(key):
-                    pass  
-                #=========================================================================
-                rpy.run(update, draw, on_key_down, on_key_up)</pre>
+                def on_key_down(key):<br>
+                <span class="tab"></span>pass<br>
+                def on_key_up(key):<br>
+                <span class="tab"></span>pass<br>
+                #=========================================================================<br>
+                rpy.run(update, draw, on_key_down, on_key_up)</span>
             </div>
         
         <span style="font-weight: bold;">Drawing primitives</span>
         <div class="test">
-            <pre>
-                from retroPy import rpy, Rect
+            <span style="font-family: 'Courier New'">
+                from retroPy import rpy, Rect<br><br>
                 
-                def update(dt):
-                    pass
+                def update(dt):<br>
+                <span class="tab"></span>pass<br><br>
 
-                def draw():
-                    rpy.clear(1)
-                    rpy.filled_rect(Rect(0, 0, 24, 24), 5)
-                    rpy.filled_circle(50, 50, 12, 8)
-                    rpy.text("Hello World", 75, 100, 7)
-                    pass
+                def draw():<br>
+                <span class="tab"></span>rpy.clear(1)<br>
+                <span class="tab"></span>rpy.filled_rect(Rect(0, 0, 24, 24), 5)<br>
+                <span class="tab"></span>rpy.filled_circle(50, 50, 12, 8)<br>
+                <span class="tab"></span>rpy.text("Hello World", 75, 100, 7)<br>
+                <span class="tab"></span>pass<br><br>
 
-                def on_key_down(key):
-                    pass
-                def on_key_up(key):
-                    pass  
-                #=========================================================================
-                rpy.run(update, draw, on_key_down, on_key_up)</pre>
+                def on_key_down(key):<br>
+                <span class="tab"></span>pass<br>
+                def on_key_up(key):<br>
+                <span class="tab"></span>pass<br>
+                #=========================================================================<br>
+                rpy.run(update, draw, on_key_down, on_key_up)</span>
             </div>
         
         <span style="font-weight: bold;">Sprite</span>
@@ -301,28 +301,28 @@
         Using a sprite</pre>
         
         <div class="test">
-            <pre>
-                from retroPy import rpy, Rect, actor, LoadSpriteStr
-                from Assets import boy
+            <span style="font-family: 'Courier New'">
+                from retroPy import rpy, Rect, actor, LoadSpriteStr<br>
+                from Assets import boy<br><br>
 
-                player = actor(LoadSpriteStr(boy.boy_idle), 20, 20, 0, 0, 0)
-                player.flipDuration(300)
-                player.speed_x = 80
-                player.bound_x(0,224)
+                player = actor(LoadSpriteStr(boy.boy_idle), 20, 20, 0, 0, 0)<br>
+                player.flipDuration(300)<br>
+                player.speed_x = 80<br>
+                player.bound_x(0,224)<br><br>
 
-                def update(dt):
-                    player.update(dt)
+                def update(dt):<br>
+                <span class="tab"></span>player.update(dt)<br><br>
 
-                def draw():
-                    rpy.clear()
-                    player.draw()
+                def draw():<br>
+                <span class="tab"></span>rpy.clear()<br>
+                <span class="tab"></span>player.draw()<br>
 
-                def on_key_down(key):
-                    pass
-                def on_key_up(key):
-                    pass  
-                #=========================================================================
-                rpy.run(update, draw, on_key_down, on_key_up) </pre>
+                def on_key_down(key):<br>
+                <span class="tab"></span>pass<br><br>
+                def on_key_up(key):<br>
+                <span class="tab"></span>pass<br>
+                #=========================================================================<br>
+                rpy.run(update, draw, on_key_down, on_key_up)</span>
             </div>
         <!--span style="font-weight: bold;">Draw:</span>
         <pre>
