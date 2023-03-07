@@ -29,11 +29,6 @@ a, a:link, a:visited, a:hover, a:active {
 		". footer .";
 }
 
-.codeline {
-    font-family: 'Courier New';
-    background-color: lightgrey;
-}
-
 mark { 
     font-family: 'Courier New';
     background-color: lightgrey;
