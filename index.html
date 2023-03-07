@@ -166,6 +166,84 @@
               draw the actor in the draw 
             </pre>
         
+        <span style="font-weight: bold;">Getting Started</span>
+        
+        <span style="font-weight: bold;">Minimal Code</span>
+        <div class="test">
+            <pre>
+                from retroPy import rpy
+
+                def update(dt):
+                    pass
+
+                def draw():
+                    pass
+
+                def on_key_down(key):
+                    pass
+                def on_key_up(key):
+                    pass  
+                #=========================================================================
+                rpy.run(update, draw, on_key_down, on_key_up)
+                </pre>
+            </div>
+        
+        <span style="font-weight: bold;">Drawing primitives</span>
+        <div class="test">
+            <pre>
+                from retroPy import rpy, Rect
+                
+                def update(dt):
+                    pass
+
+                def draw():
+                    rpy.clear(1)
+                    rpy.filled_rect(Rect(0, 0, 24, 24), 5)
+                    rpy.filled_circle(50, 50, 12, 8)
+                    rpy.text("Hello World", 75, 100, 7)
+                    pass
+
+                def on_key_down(key):
+                    pass
+                def on_key_up(key):
+                    pass  
+                #=========================================================================
+                rpy.run(update, draw, on_key_down, on_key_up)
+                </pre>
+            </div>
+        
+        <span style="font-weight: bold;">Sprite</span>
+        
+        <pre>
+        Using a sprite
+        </pre>
+        
+        <div class="test">
+            <pre>
+                from retroPy import rpy, Rect, actor, LoadSpriteStr
+                from Assets import boy
+
+                player = actor(LoadSpriteStr(boy.boy_idle), 20, 20, 0, 0, 0)
+                player.flipDuration(300)
+                player.speed_x = 80
+                player.bound_x(0,224)
+
+                def update(dt):
+                    player.update(dt)
+
+                def draw():
+                    rpy.clear()
+                    player.draw()
+
+                def on_key_down(key):
+                    pass
+                def on_key_up(key):
+                    pass  
+                #=========================================================================
+                rpy.run(update, draw, on_key_down, on_key_up) 
+                </pre>
+            </div>
+        
         <!--span style="font-weight: bold;">Draw:</span>
         <pre>
             - clear()
